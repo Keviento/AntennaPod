@@ -73,7 +73,7 @@ public class AddFeedFragment extends Fragment {
 
         Toolbar toolbar = viewBinding.toolbar;
         displayUpArrow = getParentFragmentManager().getBackStackEntryCount() != 0;
-        if (savedInstanceState != null) {
+        if (savedInstanceState == null) {
             displayUpArrow = savedInstanceState.getBoolean(KEY_UP_ARROW);
         }
         ((MainActivity) getActivity()).setupToolbarToggle(toolbar, displayUpArrow);
