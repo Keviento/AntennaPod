@@ -15,7 +15,7 @@ jobs:
       - name: Create temporary release keystore
         run: keytool -noprompt -genkey -v -keystore "app/keystore" -alias alias -storepass password -keypass password -keyalg RSA -validity 10 -dname "CN=antennapod.org, OU=dummy, O=dummy, L=dummy, S=dummy, C=US"
       - uses: gradle/gradle-build-action@v2
-      - name: Build
+        name: Build
         with:
           gradle-version: wrapper
           arguments: assemble
@@ -26,7 +26,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: gradle/gradle-build-action@v2
-      - name: Tests
+        name: Tests
         with:
           gradle-version: wrapper
           arguments: test
@@ -45,7 +45,7 @@ jobs:
           java-version: "11"
 
       - uses: gradle/gradle-build-action@v2
-      - name: Build with Gradle
+        name: Build with Gradle
         with:
           gradle-version: wrapper
         run: gradle assemblePlayDebugAndroidTest
