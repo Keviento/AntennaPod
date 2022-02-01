@@ -73,6 +73,7 @@ android {
         debug {
             applicationIdSuffix ".debug"
             resValue "string", "provider_authority", "de.danoeh.antennapod.debug.provider"
+            testCoverageEnabled true
 
             dexcount {
                 if (project.hasProperty("enableDexcountInDebug")) {
