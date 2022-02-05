@@ -60,7 +60,7 @@ public class RatingDialog {
         if (context == null) {
             return;
         }
-        IntentUtils.openInBrowser(context, "https://play.google.com/store/apps/details?id=de.danoeh.antennapod");
+        IntentUtils.openInBrowser(context,  "https://play.google.com/store/apps/details?id=de.danoeh.antennapod");
         saveRated();
     }
 
