@@ -34,7 +34,7 @@ jobs:
 
   emulator-test:
     name: "Emulator Test"
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     needs: build
     env:
       api-level: 27
