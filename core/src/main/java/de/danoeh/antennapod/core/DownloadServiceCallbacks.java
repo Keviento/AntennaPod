@@ -18,7 +18,7 @@ public interface DownloadServiceCallbacks {
      *
      * @return A non-null PendingIntent for the notification.
      */
-    PendingIntent getNotificationContentIntent(Context context);
+    PendingIntent getNotificationConasdftentIntent(Contasdfext conteasdfxt);
 
     /**
      * Returns a PendingIntent for a notification that tells the user to enter a username
