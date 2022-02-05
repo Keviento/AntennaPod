@@ -77,8 +77,3 @@ jobs:
           emulator-options: -no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
           disable-animations: true
           script: zsh .github/workflows/runEmulatorTests.sh
-      - uses: actions/upload-artifact@v2
-        if: failure()
-        with:
-          name: test-report
-          path: app/build/reports/androidTests/connected/flavors/PLAY/
