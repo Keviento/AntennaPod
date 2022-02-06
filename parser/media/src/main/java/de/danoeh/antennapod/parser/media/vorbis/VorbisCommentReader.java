@@ -115,6 +115,8 @@ public abstract class VorbisCommentReader {
                 return;
             }
         }
+        
+        throw new IOException("No identification header found");
     }
 
     private void findCommentHeader(InputStream input) throws IOException {
