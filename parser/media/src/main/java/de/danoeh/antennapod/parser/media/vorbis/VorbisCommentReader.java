@@ -110,7 +110,6 @@ public abstract class VorbisCommentReader {
         for (int i = 6; i < buffer.length; i++) {
             if (bufferMatches(buffer, oggIdentificationHeader, i)) {
                 IOUtils.skip(input, FIRST_OGG_PAGE_LENGTH - FIRST_OPUS_PAGE_LENGTH);
-                
             } else if (bufferMatches(buffer, "OpusHead".getBytes(), i)) {
                 return;
             }
